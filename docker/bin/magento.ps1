@@ -1,1 +1,1 @@
-docker-compose exec phpfpm ./bin/magento $args
+docker-compose exec php ./bin/magento $args

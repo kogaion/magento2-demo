@@ -10,7 +10,7 @@ services:
       - 80:8000
     links:
       - db
-      - phpfpm
+      - php
     volumes: &appvolumes
       - appdata:/var/www/html
       - ./../app:/var/www/html/app:delegated
@@ -18,7 +18,7 @@ services:
       - ~/.composer:/var/www/.composer:delegated
       - sockdata:/sock
 
-  phpfpm:
+  php:
     image: markoshust/magento-php:7.1-fpm-2
     links:
       - db

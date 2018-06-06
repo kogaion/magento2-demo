@@ -1,1 +1,1 @@
-docker-compose exec phpfpm composer $args
+docker-compose exec php composer $args
