@@ -34,7 +34,7 @@ services:
     volumes: *appvolumes
 
   db:
-    image: percona:5.7
+    image: mysql:5.7
     ports:
       - 3306:3306
     env_file: env/db.env
@@ -45,3 +45,29 @@ volumes:
   appdata:
   dbdata:
   sockdata:
+
+
+# docker-compose run --user=root --no-deps --rm -v $PWD/../../magento2-markoshust/.:/source php cp -r /source/. /var/www/html
+# docker-compose up -d; docker-compose ps;
+# docker-compose exec --user=root php chown -R app:app /var/www
+# docker-compose exec --user=root php find var vendor pub/static pub/media app/etc -type f -exec chmod u+w `{`} `;
+# docker-compose exec php chmod u+x bin/magento
+# docker-compose exec php /usr/local/bin/php ./bin/magento setup:install `
+#    --db-host=db `
+#    --db-name=magento `
+#    --db-user=magento `
+#    --db-password=magento `
+#    --base-url=http://magento2.localhost/ `
+#    --admin-firstname=Admin `
+#    --admin-lastname=User `
+#    --admin-email=lucian.toza@gmail.com `
+#    --admin-user=admin `
+#    --admin-password=magento2 `
+#    --language=en_US `
+#    --currency=USD `
+#    --timezone=Europe/Bucharest `
+#    --use-rewrites=1
+# docker-compose exec php ./bin/magento deploy:mode:set developer
+# docker-compose exec php ./bin/magento indexer:reindex
+# docker-compose exec php ./bin/magento cache:enable
+# [SUCCESS]: Magento Admin URI: /admin_3lrd9b
