@@ -41,6 +41,18 @@ services:
     volumes:
       - dbdata:/var/lib/mysql
 
+#  phpmyadmin:
+#    image: phpmyadmin/phpmyadmin
+#    links:
+#      - db
+#    env_file: env/db.env
+#    ports:
+#      - 8080:8080
+#    container_name: phpmyadmin
+#    volumes:
+#      - ./env/config.pma.inc.php:/etc/phpmyadmin/config.user.inc.php
+#      - /sessions
+
 volumes:
   appdata:
   dbdata:
