@@ -6,8 +6,7 @@
  * Time: 15:37
  */
 
-namespace Mastering\SampleModule\Controller\Adminhtml;
-
+namespace Mastering\SampleModule\Controller\Adminhtml\Index;
 
 
 use Magento\Backend\App\Action;
