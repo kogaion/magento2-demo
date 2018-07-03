@@ -15,8 +15,11 @@ use Mastering\SampleModule\Model\ResourceModel\Item as ItemDb;
 /**
  * Class Item
  * @package Mastering\SampleModule\Model
- * @method string getName()
- * @method string getDescription()
+ * @method string getName(): string
+ * @method string getDescription(): string
+ * @method setName(string $name): Item
+ * @method setDescription(string $description = null): Item
+ * @method setIsObjectNew(bool $new): Item
  */
 class Item extends AbstractModel
 {
