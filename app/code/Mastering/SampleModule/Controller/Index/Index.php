@@ -10,23 +10,22 @@ namespace Mastering\SampleModule\Controller\Index;
 
 
 use Magento\Framework\App\Action\Action;
-use Magento\Framework\Controller\Result\Raw;
 use Magento\Framework\Controller\ResultFactory;
+use Magento\Framework\View\Result\Page;
 
 class Index extends Action
 {
 
     /**
      * @inheritdoc
-     * @return Raw
+     * @return Page
      */
     public function execute()
     {
         /**
-         * @var Raw $result
+         * @var Page $result
          */
-        $result = $this->resultFactory->create(ResultFactory::TYPE_RAW);
-        $result->setContents('Hello World!');
+        $result = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
         return $result;
     }
 }

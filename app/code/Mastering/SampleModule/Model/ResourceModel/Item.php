@@ -19,6 +19,5 @@ class Item extends AbstractDb
     protected function _construct()
     {
         $this->_init(self::TABLE_NAME, self::ID_NAME);
-        return parent::_construct();
     }
 }

@@ -12,11 +12,17 @@ namespace Mastering\SampleModule\Model;
 use Magento\Framework\Model\AbstractModel;
 use Mastering\SampleModule\Model\ResourceModel\Item as ItemDb;
 
+/**
+ * Class Item
+ * @package Mastering\SampleModule\Model
+ * @method string getName()
+ * @method string getDescription()
+ */
 class Item extends AbstractModel
 {
     public function _construct()
     {
         $this->_init(ItemDb::class);
-        return parent::_construct();
+        parent::_construct();
     }
 }
