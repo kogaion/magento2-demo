@@ -14,6 +14,8 @@ services:
     volumes: &appvolumes
       - appdata:/var/www/html
       - ./../app:/var/www/html/app:delegated
+      - ./../.idea/misc.xml:/var/www/html/.idea/misc.xml:delegated
+      - ./../app/etc/env.php:/var/www/html/etc/env.php
       - ~/.composer:/var/www/html/var/composer_home:delegated
       - ~/.composer:/var/www/.composer:delegated
       - sockdata:/sock
