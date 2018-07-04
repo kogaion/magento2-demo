@@ -43,17 +43,15 @@ services:
     volumes:
       - dbdata:/var/lib/mysql
 
-#  phpmyadmin:
-#    image: phpmyadmin/phpmyadmin
-#    links:
-#      - db
-#    env_file: env/db.env
-#    ports:
-#      - 8080:8080
-#    container_name: phpmyadmin
-#    volumes:
-#      - ./env/config.pma.inc.php:/etc/phpmyadmin/config.user.inc.php
-#      - /sessions
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    links:
+      - db
+    restart: always
+    ports:
+     - 8080:80
+    env_file: env/db.env
 
 volumes:
   appdata:
