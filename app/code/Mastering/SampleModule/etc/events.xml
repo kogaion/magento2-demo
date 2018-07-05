@@ -4,4 +4,8 @@
     <event name="mastering_command_add_item">
         <observer name="mastering_logger" instance="Mastering\SampleModule\Observer\Logger" />
     </event>
+
+    <event name="mastering_sample_item_save_after">
+        <observer name="mastering_item_logger" instance="Mastering\SampleModule\Observer\Logger" />
+    </event>
 </config>

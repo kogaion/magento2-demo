@@ -23,6 +23,8 @@ use Mastering\SampleModule\Model\ResourceModel\Item as ItemDb;
  */
 class Item extends AbstractModel
 {
+    protected $_eventPrefix = "mastering_sample_item";
+
     public function _construct()
     {
         $this->_init(ItemDb::class);
