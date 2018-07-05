@@ -10,23 +10,21 @@ namespace Mastering\SampleModule\Controller\Adminhtml\Index;
 
 
 use Magento\Backend\App\Action;
-use Magento\Framework\Controller\Result\Raw;
 use Magento\Framework\Controller\ResultFactory;
+use Magento\Framework\View\Result\Page;
 
 class Index extends Action
 {
+    const PATH = "mastering/index/index";
 
     /**
      * @inheritdoc
-     * @return Raw
+     * @return Page
      */
     public function execute()
     {
-        /**
-         * @var Raw $result
-         */
-        $result = $this->resultFactory->create(ResultFactory::TYPE_RAW);
-        $result->setContents('Hello Admins!');
-        return $result;
+        return $this->resultFactory->create(ResultFactory::TYPE_PAGE);
     }
+
+
 }
