@@ -20,19 +20,18 @@ class UpgradeData implements UpgradeDataInterface
      */
     public function upgrade(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
     {
-        if (version_compare($context->getVersion(), '1.0.0', '<>')) {
-            return;
-        }
         
         $setup->startSetup();
-        
-        $setup->getConnection()->update(
-            $setup->getTable('mastering_sample_item'),
-            [
-                'description' => 'Default description',
-            ],
-            $setup->getConnection()->quoteInto('id = ?', 1)
-        );
+
+        if (version_compare($context->getVersion(), '1.0.0', 'eq')) {
+            $setup->getConnection()->update(
+                $setup->getTable('mastering_sample_item'),
+                [
+                    'description' => 'Default description',
+                ],
+                $setup->getConnection()->quoteInto('id = ?', 1)
+            );
+        }
         
         $setup->endSetup();
     }

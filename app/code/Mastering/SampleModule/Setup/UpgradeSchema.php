@@ -41,6 +41,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
                 'base_tax_amount',
                 [
                     'type' => Table::TYPE_DECIMAL,
+                    'length' => "12,4",
                     'comment' => 'Base Tax Amount'
                 ]
             );
