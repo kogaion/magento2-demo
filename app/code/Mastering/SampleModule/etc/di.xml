@@ -43,4 +43,8 @@
         </arguments>
     </type>
 
+    <type name="Mastering\SampleModule\Console\Command\AddItem">
+        <plugin name="console_logging" type="Mastering\SampleModule\Plugin\Logger" />
+    </type>
+
 </config>
