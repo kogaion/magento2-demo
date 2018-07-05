@@ -55,7 +55,7 @@ class AddItem extends Command
         $item->setIsObjectNew(true);
         $item->save();
 
-        $this->logger->debug("Item was created!");
+        $this->logger->debug("Item \"{$item->getName()}\" was created!");
 
         return Cli::RETURN_SUCCESS;
     }
