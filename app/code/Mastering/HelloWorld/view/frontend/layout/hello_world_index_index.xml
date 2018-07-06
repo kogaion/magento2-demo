@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Mastering_HelloWorld::test.css"/>
+        <link src="Mastering_HelloWorld::test.js"/>
+    </head>
+    <body>
+        <referenceBlock name="content">
+            <block template="content.phtml" class="Mastering\HelloWorld\Block\Main"
+                   name="mastering_helloworld_block_main"/>
+        </referenceBlock>
+
+        <referenceBlock name="head.additional">
+            <block template="head.phtml"
+                    class="Mastering\HelloWorld\Block\Head"
+                    name="mastering_helloworld_block_head" />
+        </referenceBlock>
+    </body>
+</page>
