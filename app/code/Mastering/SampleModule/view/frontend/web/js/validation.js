@@ -1842,6 +1842,7 @@
          * @return boolean
          */
         isValid: function () {
+            console.log("isValid?");
             return this.element.valid();
         },
 
