@@ -13,6 +13,11 @@ use Magento\Framework\View\Element\Template;
 use Mastering\SampleModule\Model\Item;
 use Mastering\SampleModule\Model\ResourceModel\Item\CollectionFactory;
 
+/**
+ * Class Hello
+ * @package Mastering\SampleModule\Block
+ * @method string getLabel()
+ */
 class Hello extends Template
 {
     protected $itemCollectionFactory;
