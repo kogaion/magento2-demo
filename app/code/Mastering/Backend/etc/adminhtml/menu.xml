@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Mastering_Backend::top_level" title="Mastering Backend - Top level"
+            module="Mastering_Backend" resource="Magento_Backend::content"
+            translate="title" sortOrder="1000"  />
+
+        <add id="Mastering_Backend::second_level" title="Mastering Backend - Second level"
+             module="Mastering_Backend" resource="Magento_Backend::content"
+             translate="title" sortOrder="1001"
+             parent="Mastering_Backend::top_level"
+
+            />
+
+        <add id="Mastering_Backend::third_level" title="Mastering Backend - Third level"
+             module="Mastering_Backend" resource="Magento_Backend::content"
+             translate="title" sortOrder="1002"
+             parent="Mastering_Backend::second_level"
+             action="cms/page/index" />
+    </menu>
+</config>

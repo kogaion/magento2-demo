@@ -142,6 +142,7 @@ return [
         'Dotdigitalgroup_Email' => 1,
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistSampleData' => 1,
+        'Mastering_Backend' => 1,
         'Mastering_HelloWorld' => 1,
         'Mastering_SampleModule' => 1,
         'Mastering_ToDoCrud' => 1,
