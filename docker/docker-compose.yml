@@ -85,4 +85,6 @@ volumes:
 # docker-compose exec php ./bin/magento deploy:mode:set developer
 # docker-compose exec php ./bin/magento indexer:reindex
 # docker-compose exec php ./bin/magento cache:enable
-# [SUCCESS]: Magento Admin URI: /admin_3lrd9b
+# [SUCCESS]: Magento Admin URI: /admin
+
+# docker-compose -f docker/docker-compose.yml exec php php bin/magento cache:flush; docker-compose -f docker/docker-compose.yml exec php rm -rf generated/metadata/* generated/code/* pub/static/adminhtml/* pub/static/frontend/* pub/static/deployed_version.txt
