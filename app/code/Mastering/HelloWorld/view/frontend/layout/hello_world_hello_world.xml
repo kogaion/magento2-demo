@@ -3,9 +3,9 @@
     <body>
         <referenceBlock name="content">
             <block
-                    template="content.phtml"
-                    class="Mastering\HelloWorld\Block\Main"
-                    name="mastering_hello_world"/>
+                template="content.phtml"
+                class="Mastering\HelloWorld\Block\Main"
+                name="mastering_hello_world_block_main"/>
         </referenceBlock>
     </body>
 </page>

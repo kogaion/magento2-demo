@@ -144,6 +144,7 @@ return [
         'Magento_WishlistSampleData' => 1,
         'Mastering_HelloWorld' => 1,
         'Mastering_SampleModule' => 1,
+        'Mastering_ToDoCrud' => 1,
         'Shopial_Facebook' => 1,
         'Temando_Shipping' => 1,
         'Vertex_Tax' => 1
