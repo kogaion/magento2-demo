@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Mastering_Backend::top" title="Mastering Backend ACL example" translate="title"
+                          sortOrder="1000"/>
+            </resource>
+        </resources>
+    </acl>
+</config>
