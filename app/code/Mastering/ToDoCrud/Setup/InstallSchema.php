@@ -13,6 +13,7 @@ use Magento\Framework\DB\Ddl\Table;
 use Magento\Framework\Setup\InstallSchemaInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
+use Mastering\ToDoCrud\Model\ResourceModel\Item;
 
 class InstallSchema implements InstallSchemaInterface
 {
@@ -26,11 +27,11 @@ class InstallSchema implements InstallSchemaInterface
         $setup->startSetup();
 
         $table = $setup->getConnection()->newTable(
-            $setup->getTable('mastering_todocrud_item')
+            $setup->getTable(Item::TABLE_NAME)
         );
 
         $table->addColumn(
-            'id',
+            Item::TABLE_ID,
             Table::TYPE_INTEGER,
             null,
             [
