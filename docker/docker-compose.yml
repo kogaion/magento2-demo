@@ -7,9 +7,9 @@ services:
   app:
     image: markoshust/magento-nginx:1.13-3
     ports:
-      - 80:8000
+      - 8080:8000
     links:
-      - db
+      - m2db
       - php
     volumes: &appvolumes
       - appdata:/var/www/html
@@ -19,6 +19,7 @@ services:
       - ./../app/bootstrap.php:/var/www/html/bootstrap.php:delegated
       - ./../pub/errors/local.xml:/var/www/html/pub/errors/local.xml:delegated
       - ./../docker/env/docker-php-ext-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+      - ./../docker/env/docker-php-cgi.ini:/usr/local/etc/php/conf.d/docker-php-cgi.ini
       - ~/.composer:/var/www/html/var/composer_home:delegated
       - ~/.composer:/var/www/.composer:delegated
       - sockdata:/sock
@@ -26,7 +27,7 @@ services:
   php:
     image: markoshust/magento-php:7.1-fpm-2
     links:
-      - db
+      - m2db
     volumes: *appvolumes
 
   cron:
@@ -35,26 +36,26 @@ services:
     command: /usr/local/bin/cronstart
     tty: true
     links:
-      - db
+      - m2db
     volumes: *appvolumes
 
-  db:
+  m2db:
     image: mysql:5.7
     ports:
-      - 3306:3306
+      - 3307:3306
     env_file: env/db.env
     volumes:
       - dbdata:/var/lib/mysql
 
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin
-    links:
-      - db
-    restart: always
-    ports:
-     - 8080:80
-    env_file: env/db.env
+  #phpmyadmin:
+  #  image: phpmyadmin/phpmyadmin
+  #  container_name: phpmyadmin
+  #  links:
+  #    - db
+  #  restart: always
+  #  ports:
+  #   - 8080:80
+  #  env_file: env/db.env
 
 volumes:
   appdata:
@@ -65,23 +66,14 @@ volumes:
 # docker-compose run --user=root --no-deps --rm -v $PWD/../../magento2-markoshust/.:/source php cp -r /source/. /var/www/html
 # docker-compose up -d; docker-compose ps;
 # docker-compose exec --user=root php chown -R app:app /var/www
-# docker-compose exec --user=root php find var vendor pub/static pub/media app/etc -type f -exec chmod u+w `{`} `;
+# docker-compose exec --user=root php find var vendor pub/static pub/media app/etc -type f -exec chmod u+w {} \;
 # docker-compose exec php chmod u+x bin/magento
-# docker-compose exec php /usr/local/bin/php ./bin/magento setup:install `
-#    --db-host=db `
-#    --db-name=magento `
-#    --db-user=magento `
-#    --db-password=magento `
-#    --base-url=http://magento2.localhost/ `
-#    --admin-firstname=Admin `
-#    --admin-lastname=User `
-#    --admin-email=lucian.toza@gmail.com `
-#    --admin-user=admin `
-#    --admin-password=magento2 `
-#    --language=en_US `
-#    --currency=USD `
-#    --timezone=Europe/Bucharest `
-#    --use-rewrites=1
+#docker-compose exec php /usr/local/bin/php ./bin/magento setup:install `
+#  --db-host=m2db:3307 --db-name=magento --db-user=magento --db-password=magento `
+#  --base-url=http://magento2.localhost:8080/ `
+#  --admin-firstname=Admin --admin-lastname=User --admin-email=ltoza@optaros.com `
+#  --admin-user=optaros --admin-password=Optaros1234! `
+#  --language=en_US --currency=USD --timezone=Europe/Bucharest --use-rewrites=1
 # docker-compose exec php ./bin/magento deploy:mode:set developer
 # docker-compose exec php ./bin/magento indexer:reindex
 # docker-compose exec php ./bin/magento cache:enable
