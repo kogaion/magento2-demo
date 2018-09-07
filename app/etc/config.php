@@ -148,6 +148,8 @@ return [
         'Mastering_ToDoCrud' => 1,
         'Shopial_Facebook' => 1,
         'Temando_Shipping' => 1,
+        'Training_Empty' => 1,
+        'Training_Dependent' => 1,
         'Vertex_Tax' => 1
     ]
 ];
