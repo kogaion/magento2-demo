@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="productPlugin" type="Training\Plugin\Model\ProductPlugin" sortOrder="1" disabled="false" />
+    </type>
+    
+    <type name="Magento\Theme\Block\Html\Footer">
+        <plugin name="footerPlugin" type="Training\Plugin\Model\FooterPlugin" sortOrder="1" disabled="false" />
+    </type>
+
+    <type name="Magento\Theme\Block\Html\Breadcrumbs">
+        <plugin name="breadcrumbsPlugin" type="Training\Plugin\Model\BreadcrumbsPlugin" sortOrder="1" disabled="false" />
+    </type>
+
+</config>

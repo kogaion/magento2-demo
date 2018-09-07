@@ -142,14 +142,16 @@ return [
         'Dotdigitalgroup_Email' => 1,
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistSampleData' => 1,
-        'Mastering_Backend' => 1,
-        'Mastering_HelloWorld' => 1,
-        'Mastering_SampleModule' => 1,
-        'Mastering_ToDoCrud' => 1,
+        'Mastering_Backend' => 0,
+        'Mastering_HelloWorld' => 0,
+        'Mastering_SampleModule' => 0,
+        'Mastering_ToDoCrud' => 0,
         'Shopial_Facebook' => 1,
         'Temando_Shipping' => 1,
         'Training_Empty' => 1,
+        'Training_Di' => 1,
         'Training_Dependent' => 1,
+        'Training_Plugin' => 1,
         'Vertex_Tax' => 1
     ]
 ];
