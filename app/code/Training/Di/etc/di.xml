@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Catalog\Api\ProductRepositoryInterface" type="Magento\Catalog\Model\ProductRepository" />
+
+    <type name="Training\Di\Model\Test">
+        <arguments>
+            <argument xsi:type="string" name="someStringParameter">param1 value</argument>
+            <argument xsi:type="array" name="someArray">
+                <item xsi:type="string" name="firstItem">someArray item 1</item>
+                <item xsi:type="string" name="secondItem">someArray item 2</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

@@ -13,15 +13,28 @@ services:
       - php
     volumes: &appvolumes
       - appdata:/var/www/html
+
+      - ./../lib:/var/www/html/lib:delegated
+      - ./../vendor:/var/www/html/vendor:delegated
+      - ./../setup:/var/www/html/setup:delegated
       - ./../app:/var/www/html/app:delegated
+
       - ./../.idea/misc.xml:/var/www/html/.idea/misc.xml:delegated
+
       - ./../app/etc/env.php:/var/www/html/etc/env.php:delegated
       - ./../app/bootstrap.php:/var/www/html/bootstrap.php:delegated
+      - ./../index.php:/var/www/html/index.php:delegated
+
+      - ./../composer.json:/var/www/html/composer.json:delegated
+      - ./../composer.lock:/var/www/html/composer.lock:delegated
+
       - ./../pub/errors/local.xml:/var/www/html/pub/errors/local.xml:delegated
+
       - ./../docker/env/docker-php-ext-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
       - ./../docker/env/docker-php-cgi.ini:/usr/local/etc/php/conf.d/docker-php-cgi.ini
       - ~/.composer:/var/www/html/var/composer_home:delegated
       - ~/.composer:/var/www/.composer:delegated
+
       - sockdata:/sock
 
   php:
