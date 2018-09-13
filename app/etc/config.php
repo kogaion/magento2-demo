@@ -148,6 +148,7 @@ return [
         'Mastering_ToDoCrud' => 0,
         'Shopial_Facebook' => 1,
         'Temando_Shipping' => 1,
+        'Training_Config' => 1,
         'Training_Empty' => 1,
         'Training_Di' => 1,
         'Training_Dependent' => 1,

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<my_custom_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="my_custom_config.xsd">
+    <id>199</id>
+    <type>a type</type>
+    <name>a name</name>
+</my_custom_config>
