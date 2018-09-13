@@ -151,6 +151,7 @@ return [
         'Training_Empty' => 1,
         'Training_Di' => 1,
         'Training_Dependent' => 1,
+        'Training_Events' => 1,
         'Training_Plugin' => 1,
         'Vertex_Tax' => 1
     ]
