@@ -154,6 +154,7 @@ return [
         'Training_Dependent' => 1,
         'Training_Events' => 1,
         'Training_Plugin' => 1,
+        'Training_Rendering' => 1,
         'Vertex_Tax' => 1
     ]
 ];
