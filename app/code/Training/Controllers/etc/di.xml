@@ -3,7 +3,11 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
-    <preference for="Magento\Catalog\Controller\Product\View"
-                type="Training\Controllers\Controller\Product\View"/>
+    <!--<preference for="Magento\Catalog\Controller\Product\View"-->
+                <!--type="Training\Controllers\Controller\Product\View"/>-->
+
+    <type name="Magento\Catalog\Controller\Product\View">
+        <plugin name="Training_Controllers_Controller_Product_View" disabled="false" sortOrder="1" type="Training\Controllers\Controller\Product\View"/>
+    </type>
 
 </config>

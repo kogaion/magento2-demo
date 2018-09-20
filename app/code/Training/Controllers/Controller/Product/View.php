@@ -12,4 +12,19 @@ class View extends CatalogProductView
     {
         $this->_forward("index", "myArea", "ctrl");
     }
+
+    public function beforeExecute(CatalogProductView $subject)
+    {
+        return null;
+    }
+
+    public function afterExecute(CatalogProductView $subject, $result)
+    {
+        $this->_forward("index", "myArea", "ctrl");
+    }
+
+//    public function aroundExecute(CatalogProductView $subject, callable $proceed)
+//    {
+//        $this->_forward("index", "index", "cms");
+//    }
 }
