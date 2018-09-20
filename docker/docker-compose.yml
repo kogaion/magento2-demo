@@ -24,6 +24,7 @@ services:
       - ./../app/etc/env.php:/var/www/html/etc/env.php:delegated
       - ./../app/bootstrap.php:/var/www/html/bootstrap.php:delegated
       - ./../index.php:/var/www/html/index.php:delegated
+      - ./../var/log/system.log:/var/www/html/var/log/system.log:delegated
 
       - ./../composer.json:/var/www/html/composer.json:delegated
       - ./../composer.lock:/var/www/html/composer.lock:delegated

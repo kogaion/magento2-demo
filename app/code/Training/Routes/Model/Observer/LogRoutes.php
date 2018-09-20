@@ -32,6 +32,9 @@ class LogRoutes implements ObserverInterface
      */
     public function execute(Observer $observer)
     {
-        $this->logger->info(">>> {{{" . __CLASS__ . "}}}: <routes>: " . json_encode(array_values((array) $this->routerList)));
+//        echo "<pre>";
+//        print_r(json_encode((array) $this->routerList));
+//        echo "</pre>";
+        $this->logger->info(print_r(json_encode(array_values((array) $this->routerList)), true));
     }
 }

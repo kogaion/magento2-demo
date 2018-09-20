@@ -156,6 +156,7 @@ return [
         'Training_Plugin' => 1,
         'Training_Rendering' => 1,
         'Training_Routes' => 1,
+        'Training_Routers' => 1,
         'Vertex_Tax' => 1
     ]
 ];
