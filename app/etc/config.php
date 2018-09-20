@@ -149,14 +149,15 @@ return [
         'Shopial_Facebook' => 1,
         'Temando_Shipping' => 1,
         'Training_Config' => 1,
+        'Training_Routes' => 1,
         'Training_Empty' => 1,
         'Training_Di' => 1,
         'Training_Dependent' => 1,
         'Training_Events' => 1,
         'Training_Plugin' => 1,
         'Training_Rendering' => 1,
-        'Training_Routes' => 1,
         'Training_Routers' => 1,
+        'Training_Controllers' => 1,
         'Vertex_Tax' => 1
     ]
 ];
