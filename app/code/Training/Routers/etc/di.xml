@@ -11,4 +11,6 @@
         </arguments>
     </type>
 
+    <preference for="Magento\Framework\App\Router\NoRouteHandler" type="Training\Routers\Controller\NoRouteHandler" />
+
 </config>
