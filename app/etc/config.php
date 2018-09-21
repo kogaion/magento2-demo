@@ -154,9 +154,10 @@ return [
         'Training_Di' => 1,
         'Training_Dependent' => 1,
         'Training_Events' => 1,
-        'Training_Plugin' => 1,
         'Training_Rendering' => 1,
+        'Training_Plugin' => 1,
         'Training_RenderingFlow' => 1,
+        'Training_NewBlockType' => 1,
         'Training_Routers' => 1,
         'Training_Controllers' => 1,
         'Vertex_Tax' => 1
