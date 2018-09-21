@@ -156,6 +156,7 @@ return [
         'Training_Events' => 1,
         'Training_Rendering' => 1,
         'Training_Plugin' => 1,
+        'Training_ProductDescription' => 1,
         'Training_RenderingFlow' => 1,
         'Training_NewBlockType' => 1,
         'Training_Routers' => 1,
