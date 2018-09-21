@@ -7,7 +7,7 @@
                 <!--type="Training\Controllers\Controller\Product\View"/>-->
 
     <type name="Magento\Catalog\Controller\Product\View">
-        <plugin name="Training_Controllers_Controller_Product_View" disabled="false" sortOrder="1" type="Training\Controllers\Controller\Product\View"/>
+        <plugin name="Training_Controllers_Controller_Product_View" disabled="true" sortOrder="1" type="Training\Controllers\Controller\Product\View"/>
     </type>
 
 </config>
