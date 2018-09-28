@@ -17,8 +17,9 @@ class Index extends Action
      */
     public function execute()
     {
-        /** @var Page $resultPage
-         *  @var Text $textBlock
+        /**
+         * @var Page $resultPage
+         * @var Text $textBlock
          */
         $resultPage = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
         $resultPage->getLayout()->addBlock(Type::class, "my_block_type", "content");

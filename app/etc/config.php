@@ -155,6 +155,7 @@ return [
         'Training_Dependent' => 1,
         'Training_Events' => 1,
         'Training_Rendering' => 1,
+        'Training_NewTemplate' => 1,
         'Training_Plugin' => 1,
         'Training_ProductDescription' => 1,
         'Training_RenderingFlow' => 1,
