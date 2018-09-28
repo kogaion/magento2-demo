@@ -7,7 +7,10 @@
         <plugin name="Training.ProductDescription.Block.ProductViewDescription"
                 type="Training\ProductDescription\Block\ProductViewDescription"
                 sortOrder="10"
-                disabled="false" />
+                disabled="true" />
     </type>
+
+    <preference for="Magento\Catalog\Block\Product\View\Attributes"
+                type="Training\ProductDescription\Block\ProductViewAttribute" />
 
 </config>
