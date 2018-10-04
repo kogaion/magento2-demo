@@ -31,6 +31,10 @@
                 </arguments>
             </block>
         </referenceContainer>
+
+
+        <referenceBlock name="training.layout.custom.block" remove="true" />
+
     </body>
 
 </page>
