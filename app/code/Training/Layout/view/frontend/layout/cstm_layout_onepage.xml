@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      layout="1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <body>
+        <referenceBlock name="header.links">
+            <block class="Magento\Framework\View\Element\Html\Link"
+                   name="test.link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Test Link</argument>
+                    <argument name="path" xsi:type="string" translate="false">path/to/testlink</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument name="title" translate="true" xsi:type="string">Training advanced title</argument>
+            </action>
+        </referenceBlock>
+
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template"
+                   name="one_page_layout"
+                   template="Training_Layout::onepage.phtml">
+                <arguments>
+                    <argument name="background_color" xsi:type="string">#000</argument>
+                    <argument name="color" xsi:type="string">lightskyblue</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+
+</page>
