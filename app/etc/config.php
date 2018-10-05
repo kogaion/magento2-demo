@@ -154,6 +154,7 @@ return [
         'Training_Di' => 1,
         'Training_Dependent' => 1,
         'Training_Events' => 1,
+        'Training_Js' => 1,
         'Training_Layout' => 1,
         'Training_Rendering' => 1,
         'Training_NewTemplate' => 1,
