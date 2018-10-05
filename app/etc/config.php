@@ -164,6 +164,7 @@ return [
         'Training_NewBlockType' => 1,
         'Training_Routers' => 1,
         'Training_Controllers' => 1,
+        'Training_Ui' => 1,
         'Vertex_Tax' => 1
     ]
 ];
