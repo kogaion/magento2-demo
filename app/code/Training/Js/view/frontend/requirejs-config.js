@@ -1,7 +1,8 @@
 var config = {
     map: {
         '*': {
-            'trainingjs': 'Training_Js/js/my-extension'
+            'trainingjsAll': 'Training_Js/js/my-extension',
+            'trainingjsAttribute': 'Training_Js/js/my-extension'
         }
     }
 };

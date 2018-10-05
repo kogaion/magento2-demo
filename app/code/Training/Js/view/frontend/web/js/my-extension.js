@@ -1,7 +1,7 @@
 define(['jquery', 'mage/mage'], function ($) {
     'use strict';
 
-    $.widget('mage.trainingjs', {
+    $.widget('mage.trainingjsAttribute', {
         _create: function () {
             this._super();
             this._showDetails();
@@ -19,6 +19,15 @@ define(['jquery', 'mage/mage'], function ($) {
         }
     });
 
-    return $.mage.trainingjs;
+    $.widget('mage.trainingjsAll', {
+        _create: function() {
+            console.log("test all refreshes");
+        }
+    });
+
+    return {
+        trainingjsAttribute: $.mage.trainingjsAttribute,
+        trainingjsAll: $.mage.trainingjsAll
+    }
 });
 
